@@ -1,0 +1,60 @@
+name: campuscomp
+
+x-app: &app
+  image: campuscomp-ai:local
+  build: .
+  environment: &app-env
+    DATABASE_URL: postgresql+psycopg://campuscomp:${POSTGRES_PASSWORD:-campuscomp-local-only}@db:5432/campuscomp
+    REDIS_URL: redis://redis:6379/0
+    DEMO_MODE: "true"
+  restart: unless-stopped
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: campuscomp
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-campuscomp-local-only}
+      POSTGRES_DB: campuscomp
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U campuscomp -d campuscomp"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "128mb", "--maxmemory-policy", "noeviction"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  init:
+    <<: *app
+    command: ["python", "-m", "app.cli", "init-demo"]
+    restart: "no"
+    depends_on:
+      db: {condition: service_healthy}
+  api:
+    <<: *app
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+  worker:
+    <<: *app
+    command: ["python", "-m", "celery", "-A", "app.celery_app:celery_app", "worker", "-l", "INFO", "-Q", "control,notify,crawl,ai", "--concurrency=2"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+  beat:
+    <<: *app
+    command: ["python", "-m", "celery", "-A", "app.celery_app:celery_app", "beat", "-l", "INFO"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+
+volumes:
+  postgres-data:
+  redis-data:

@@ -1,0 +1,1 @@
+"""CampusComp AI teaching starter."""

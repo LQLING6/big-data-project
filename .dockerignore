@@ -1,0 +1,13 @@
+.git
+.venv
+**/__pycache__
+**/.pytest_cache
+**/*.db
+**/*.db-shm
+**/*.db-wal
+frontend/node_modules
+frontend/.pnpm-store
+frontend/dist
+frontend-dist
+data
+.env

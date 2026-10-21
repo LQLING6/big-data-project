@@ -1,0 +1,8 @@
+[
+  {"key":"data-lab","title":"校园数据洞察挑战赛","category":"数据与AI","tags":["数据分析","人工智能"],"skills":["python","sql"],"majors":[],"levels":["本科","专科"],"days":12,"precision":"datetime","summary":"围绕校园生活中的问题，使用公开或合成数据完成一次分析与可视化。此条为合成赛事，不提供真实报名。"},
+  {"key":"design-future","title":"未来校园创意设计赛","category":"创意设计","tags":["设计","创新创业"],"skills":["figma","设计"],"majors":[],"levels":["本科"],"days":18,"precision":"datetime","summary":"从学习空间、信息服务或校园出行中选择一个场景，提交设计方案与可交互原型。合成演示赛事。"},
+  {"key":"math-explore","title":"数学建模探索赛","category":"数理建模","tags":["数学建模","数据分析"],"skills":["python","数学建模"],"majors":[],"levels":["本科"],"days":9,"precision":"date","summary":"通过数学模型分析一个现实问题，提交模型说明和结果。原文仅提供截止日期，用于演示时间精度不足的处理。"},
+  {"key":"software-craft","title":"开放校园软件作品赛","category":"软件开发","tags":["软件开发","创新创业"],"skills":["python","vue"],"majors":["计算机科学与技术","软件工程"],"levels":["本科"],"days":25,"precision":"datetime","summary":"提交一款解决校园实际问题的软件，提供可运行版本、说明文档与演示。仅用于演示专业限制筛选。"},
+  {"key":"research-forum","title":"研究生科学创新论坛","category":"学术研究","tags":["学术研究"],"skills":["论文写作"],"majors":[],"levels":["硕士","博士"],"days":20,"precision":"datetime","summary":"用于演示培养层次硬约束：本科生画像不应出现在该赛事的主推荐中。非真实赛事。"},
+  {"key":"green-campus","title":"绿色校园公益策划赛","category":"社会实践","tags":["社会实践","设计"],"skills":["策划"],"majors":[],"levels":["本科","专科"],"days":30,"precision":"unknown","summary":"以校园可持续发展为主题提交公益活动方案。此演示通知尚未公布截止时间，不生成精确提醒。"}
+]
