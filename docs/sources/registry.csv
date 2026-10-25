@@ -1,0 +1,2 @@
+source_id,name,base_url,terms_url,robots_status,allowed_paths,interval_seconds,retention_days,policy_status,review_date,notes
+example-001,示例来源（仅说明格式，勿用于采集）,https://example.com,https://example.com/terms,unknown,/notices,3600,90,pending,2026-11-01,示例行：接入前需完成准入检查
