@@ -1,7 +1,9 @@
+import enum
 from datetime import datetime
 
 from sqlalchemy import JSON, Boolean, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import ForeignKey, String, Boolean, Integer, Enum, DateTime
 
 from app.db import Base, utcnow
 
@@ -13,7 +15,9 @@ class User(Base):
     password_hash: Mapped[str] = mapped_column(String(256))
     role: Mapped[str] = mapped_column(String(20), default="student")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
-
+    email: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    email_verified: Mapped[bool] = mapped_column(Boolean, default=False)
+    email_opt_in: Mapped[bool] = mapped_column(Boolean, default=False)
 
 class LoginSession(Base):
     __tablename__ = "login_sessions"
@@ -21,6 +25,25 @@ class LoginSession(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
 
+
+class EmailStatus(str, enum.Enum):
+    pending = "pending"
+    accepted = "accepted"
+    delivered = "delivered"
+    failed = "failed"
+    unknown = "unknown"
+
+class EmailDelivery(Base):
+    __tablename__ = "email_deliveries"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    idempotency_key: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    status: Mapped[EmailStatus] = mapped_column(Enum(EmailStatus), default=EmailStatus.pending)
+    error_message: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    retry_count: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 
 class Profile(Base):
     __tablename__ = "profiles"

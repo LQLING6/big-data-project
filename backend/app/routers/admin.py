@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.db import get_db, utcnow
-from app.models import AuditLog, Competition, Notice, OutboxEvent, ReminderJob, Source, User
+from app.models import AuditLog, Competition, Notice, OutboxEvent, ReminderJob, Source, User, EmailDelivery, EmailStatus
 from app.schemas import CompetitionOutput, DeadlineUpdate
 from app.security import admin_user
 from app.services.reminders import replan_competition
@@ -84,3 +84,58 @@ def trigger_demo(user: User = Depends(admin_user), db: Session = Depends(get_db)
     db.commit()
     from app.worker import run_inline_cycle
     return run_inline_cycle()
+
+
+# ================= B 任务：邮件投递查询与重试 =================
+from app.models import EmailDelivery, EmailStatus
+from sqlalchemy import select
+
+
+@router.get("/emails")
+def list_emails(
+        db: Session = Depends(get_db),
+        limit: int = 50,
+        user: User = Depends(admin_user)  # 保证只有管理员能看
+):
+    """查询邮件投递记录列表，供后台排查失败原因"""
+    # 按创建时间倒序，取最新的
+    stmt = select(EmailDelivery).order_by(EmailDelivery.created_at.desc()).limit(limit)
+    records = db.scalars(stmt).all()
+
+    # 把 SQLAlchemy 对象转成普通的字典返回，避免 FastAPI 序列化报错
+    result = []
+    for r in records:
+        result.append({
+            "id": r.id,
+            "user_id": r.user_id,
+            "idempotency_key": r.idempotency_key,
+            "status": r.status.value if r.status else "unknown",
+            "error_message": r.error_message,
+            "retry_count": r.retry_count,
+            "created_at": r.created_at.isoformat() if r.created_at else None,
+            "updated_at": r.updated_at.isoformat() if r.updated_at else None,
+        })
+    return result
+
+
+@router.post("/emails/{email_id}/retry")
+def retry_email(
+        email_id: int,
+        db: Session = Depends(get_db),
+        user: User = Depends(admin_user)
+):
+    """人工重试：把 failed 或 unknown 的邮件重置为 pending"""
+    email_record = db.get(EmailDelivery, email_id)
+    if not email_record:
+        raise HTTPException(status_code=404, detail="邮件记录不存在")
+
+    # 只有失败或未知状态的才允许重试
+    if email_record.status not in [EmailStatus.failed, EmailStatus.unknown]:
+        raise HTTPException(status_code=400, detail="只能重试失败或结果未知的邮件")
+
+    # 重置状态
+    email_record.status = EmailStatus.pending
+    email_record.retry_count = 0  # 可选：重置重试次数
+    db.commit()
+
+    return {"message": "已成功重置状态，Worker 将在下一个周期尝试发送"}

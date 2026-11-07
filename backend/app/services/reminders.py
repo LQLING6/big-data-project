@@ -4,8 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db import utc, utcnow
-from app.models import Competition, Notification, OutboxEvent, ReminderJob, Subscription
-
+from app.models import Competition, Notification, OutboxEvent, ReminderJob, Subscription, User, EmailDelivery, EmailStatus
 
 def replan_subscription(db: Session, subscription: Subscription, now: datetime | None = None) -> ReminderJob | None:
     now = now or utcnow()
@@ -117,6 +116,20 @@ def deliver_event(db: Session, event_id: int, now: datetime | None = None) -> st
             title="赛事已截止，请核对报名状态" if expired else "你订阅的赛事即将截止",
             body=f"《{competition.title}》截止时间：{utc(competition.deadline_at).isoformat()}。请查看详情与来源证据。",
         ))
+        user = db.get(User, subscription.user_id)
+        if user and user.email and user.email_verified and user.email_opt_in:
+            # 构造稳定业务幂等键 (这里用 job.id 和 version 来做唯一标识)
+            idempotency_key = f"email_{user.id}_{job.id}_{competition.version}"
+
+            # 查重防止重复插入
+            existing = db.scalar(select(EmailDelivery).where(EmailDelivery.idempotency_key == idempotency_key))
+            if not existing:
+                email_record = EmailDelivery(
+                    user_id=user.id,
+                    idempotency_key=idempotency_key,
+                    status=EmailStatus.pending
+                )
+                db.add(email_record)
     job.state = "sent"
     event.state = "done"
     event.last_error = None
