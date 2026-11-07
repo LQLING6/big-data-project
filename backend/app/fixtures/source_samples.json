@@ -1,0 +1,939 @@
+[
+  {
+    "case": "normal_datetime",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-001",
+      "title": "星火程序设计挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "星火程序设计挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-15T18:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-001/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：星火程序设计挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】星火程序设计挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "date_only",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-002",
+      "title": "校园数据建模赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "校园数据建模赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-002",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "date",
+          "at": null,
+          "on_date": "2027-04-01",
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-002",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-002/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：校园数据建模赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-002",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-002",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-002",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】校园数据建模赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "unknown_deadline",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-003",
+      "title": "智慧校园创新赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "智慧校园创新赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-003",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "unknown",
+          "at": null,
+          "on_date": null,
+          "evidence": {
+            "quote": "截止时间尚未公布",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-003",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-003/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：智慧校园创新赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-003",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-003",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-003",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】智慧校园创新赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "multiple_deadlines",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-004",
+      "title": "校园算法联赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "校园算法联赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "school_selection",
+          "precision": "date",
+          "at": null,
+          "on_date": "2027-02-10",
+          "evidence": {
+            "quote": "校内选拔截止 2027-02-10",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        },
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-20T17:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "主办方报名截止 2027-03-20 17:00",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        },
+        {
+          "kind": "competition_schedule",
+          "precision": "date",
+          "at": null,
+          "on_date": "2027-05-15",
+          "evidence": {
+            "quote": "比赛日期 2027-05-15",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-004/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：校园算法联赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-004",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】校园算法联赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "missing_major",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-005",
+      "title": "通用软件设计赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "通用软件设计赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-005",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [],
+      "grade_min": null,
+      "grade_max": null,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-15T18:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-005",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-005/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：通用软件设计赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-005",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-005",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-005",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】通用软件设计赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "missing_grade",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-006",
+      "title": "研究生数据挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "研究生数据挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-006",
+      "school_scope": null,
+      "allowed_levels": [
+        "硕士",
+        "博士"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": null,
+      "grade_max": null,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-15T18:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-006",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-006/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：研究生数据挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-006",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-006",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-006",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】研究生数据挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "delayed_v2",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-001",
+      "title": "星火程序设计挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "星火程序设计挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-20T18:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "延期通知：报名截止调整为 2027-03-20 18:00",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-001/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：星火程序设计挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成延期样本】星火程序设计挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 2,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "cross_edition",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-001-2028",
+      "title": "星火程序设计挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "星火程序设计挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2028",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-001-2028",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "date",
+          "at": null,
+          "on_date": "2028-03-15",
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-001-2028",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-001-2028/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：星火程序设计挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-2028",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-2028",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-2028",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】星火程序设计挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "cross_track",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-001-ai",
+      "title": "星火程序设计挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "星火程序设计挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "人工智能",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-001-ai",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "date",
+          "at": null,
+          "on_date": "2027-03-15",
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-001-ai",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-001-ai/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：星火程序设计挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-ai",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-ai",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-001-ai",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】星火程序设计挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "different_school",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-007",
+      "title": "示例大学校内选拔赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "示例大学校内选拔赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-007",
+      "school_scope": "示例大学",
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "school_selection",
+          "precision": "datetime",
+          "at": "2027-01-10T12:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-007",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": "https://example.org/campuscomp-samples/synthetic-007/entry",
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：示例大学校内选拔赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-007",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-007",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知：报名入口为占位链接。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-007",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】示例大学校内选拔赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "missing_entry",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-008",
+      "title": "开源软件挑战赛",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "开源软件挑战赛的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-008",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "organizer_registration",
+          "precision": "datetime",
+          "at": "2027-03-15T18:00:00+08:00",
+          "on_date": null,
+          "evidence": {
+            "quote": "合成通知中的截止时间",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-008",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": null,
+      "event_date": null,
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：开源软件挑战赛",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-008",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-008",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知未公布报名入口。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-008",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】开源软件挑战赛。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  },
+  {
+    "case": "event_only",
+    "notice": {
+      "schema_version": "c02-v1",
+      "sample_type": "synthetic",
+      "source_id": "synthetic-source-001",
+      "external_key": "synthetic-009",
+      "title": "校园编程马拉松",
+      "organizer": "赛知合成样本工作组（虚构）",
+      "category": "计算机",
+      "summary": "校园编程马拉松的离线合成样本，用于字段与边界测试。",
+      "edition": "2027",
+      "track": "算法",
+      "source_url": "https://example.org/campuscomp-samples/synthetic-009",
+      "school_scope": null,
+      "allowed_levels": [
+        "本科"
+      ],
+      "allowed_majors": [
+        "计算机科学与技术"
+      ],
+      "grade_min": 1,
+      "grade_max": 4,
+      "deadlines": [
+        {
+          "kind": "competition_schedule",
+          "precision": "date",
+          "at": null,
+          "on_date": "2027-06-01",
+          "evidence": {
+            "quote": "比赛日期 2027-06-01",
+            "source_url": "https://example.org/campuscomp-samples/synthetic-009",
+            "captured_at": "2026-11-07T12:00:00+08:00",
+            "origin": "synthetic",
+            "version": "fixture-v1"
+          }
+        }
+      ],
+      "entry_url": null,
+      "event_date": "2027-06-01",
+      "tags": [
+        "合成样本",
+        "程序设计"
+      ],
+      "skill_tags": [
+        "python",
+        "算法"
+      ],
+      "field_evidence": {
+        "title": {
+          "quote": "合成通知标题：校园编程马拉松",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-009",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "eligibility": {
+          "quote": "合成通知：资格条件仅用于测试，不代表真实赛事。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-009",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        },
+        "entry_url": {
+          "quote": "合成通知未公布报名入口。",
+          "source_url": "https://example.org/campuscomp-samples/synthetic-009",
+          "captured_at": "2026-11-07T12:00:00+08:00",
+          "origin": "synthetic",
+          "version": "fixture-v1"
+        }
+      },
+      "body": "【合成演示数据】校园编程马拉松。本记录不是真实赛事通知。",
+      "notice_version": 1,
+      "parser_version": "fixture-v1"
+    }
+  }
+]
